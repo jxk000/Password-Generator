@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Password generator</title>
+    <script src="https://kit.fontawesome.com/edc3f622de.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section class="content">
+        <section class="box">
+            <div class="box__title">
+                <h1>Password Generator</h1>
+            </div>
+            <div class="box__option">
+                <div class="box__option-container">
+
+                    <div class="box__option-range">
+                        <label for="numberPass">Password length </label>
+                        <input type="range" name="number" id="numberPass" min="1" max="40" class="rangeInput" value="1"
+                            onchange="rangeVal()">
+                        <span id="rangeValue">1</span>
+
+                    </div>
+                    <div class="box__option-input">
+
+                        <label for="bigCheck" class="styled-checboxLabel">
+                            <input class="styled-checkbox" id="bigCheck" type="checkbox" checked>Big letters
+                        </label>
+
+                    </div>
+                    <div class="box__option-input">
+                        <input type="checkbox" name="smallL" id="smallCheck" class="styled-checkbox">Small letters
+                    </div>
+                    <div class="box__option-input">
+                        <input type="checkbox" name="otherS" id="otherCheck" class="styled-checkbox">Special signs
+                    </div>
+                    <div class="box__option-input">
+                        <input type="checkbox" name="numberS" id="numberCheck" class="styled-checkbox">Numbers
+                    </div>
+
+
+
+                </div>
+
+
+
+
+            </div>
+            <button id="btnGenerator" class="generateInput">Generate password</button>
+            <div class="box__result">
+                <div class="box__result--information">
+                    <span class="result-password">
+                        Your password:
+                    </span>
+                    <span class="result-copyPassword">
+                        Copy
+                    </span>
+                </div>
+                <div class="pass_generate">
+                    <div class="pass__test"></div>
+                </div>
+                
+            </div>
+        </section>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
