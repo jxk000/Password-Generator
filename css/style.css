@@ -2,33 +2,21 @@
 body {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: "Raleway", sans-serif;
 }
 
 .content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   width: 100vw;
 }
 
 .box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .box__title {
@@ -42,56 +30,33 @@ body {
 }
 
 .box__option-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .box__option {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 500px;
+  align-items: center;
+  flex-direction: column;
+  min-width: 500px;
+  width: 100%;
   min-height: 100px;
-  padding: 20px 10px;
+  padding: 20px 0;
   background-color: rgb(248, 248, 248);
 }
 
 .box__option-input {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   font-size: 1.4rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
+  align-items: center;
+  justify-content: left;
   border-radius: 3px;
   margin: 1px;
 }
 .box__option-input label {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   width: 100%;
   height: 100%;
 }
@@ -101,19 +66,10 @@ body {
 }
 
 .box__option-range {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   font-size: 1.2rem;
 }
 
@@ -126,55 +82,32 @@ body {
   height: 2em;
   border: 1px solid rgb(168, 168, 168);
   border-radius: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 .styled-checkbox::after {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   content: "X";
   font-family: "Font Awesome 5 Free";
   font-size: 1.2rem;
   display: none;
 }
 .styled-checkbox:checked {
-  background-color: #6ab04c;
-  border: 1px solid #6ab04c;
-  color: #badc58;
+  background-color: none;
+  color: #174b4b;
 }
 .styled-checkbox:checked::after {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-}
-
-.styled-checkbox:checked + .box__option-input {
-  font-weight: bold;
 }
 
 .box__result {
   margin-top: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   background-color: whitesmoke;
   max-width: 520px;
   min-height: 60px;
@@ -184,14 +117,10 @@ body {
 }
 
 .box__result--information {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   font-size: 1rem;
-  margin: 0 10px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  margin: 0 10px 10px 0;
+  justify-content: space-between;
   color: gray;
 }
 
@@ -205,13 +134,6 @@ body {
 
 .pass_generate {
   text-align: center;
-}
-
-.pass_text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 300px;
 }
 
 .generateInput {
