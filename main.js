@@ -8,11 +8,15 @@ const checkBox2 = document.querySelector('#smallCheck')
 const checkBox3 = document.querySelector('#otherCheck')
 const checkBox4 = document.querySelector('#numberCheck')
 const rangeValue = document.querySelector('#rangeValue')
+const strengthPass = document.querySelector('#box__strengthPass-text')
+const moduleOpen = document.querySelector('#module__open')
+const moduleClose = document.querySelector('.module__close')
+const moduleBox = document.querySelector('.module__info')
 
 const passGenerator = () => {
 	if (passLenght.value <= 40) {
 		let password = ''
-		passText.style.color = 'black'
+		passText.style.color = 'white'
 		// Symbols
 		let alphabeta = [
 			'q',
@@ -107,6 +111,40 @@ const passGenerator = () => {
 		passText.textContent = `Choose options`
 		passText.style.color = '#eb4d4b'
 	}
+
+	if (passText.textContent.length < 10) {
+		strengthPass.style.color = 'red'
+		strengthPass.textContent = 'NOT STRONG 🤬'
+	}
+	if (passText.textContent.length >= 10 && checkBox1.checked == true) {
+		strengthPass.style.color = 'orange'
+		strengthPass.textContent = 'MEDIUM 😬'
+	}
+	if (
+		passText.textContent.length >= 10 &&
+		checkBox1.checked == true &&
+		checkBox4.checked == true
+	) {
+		strengthPass.style.color = 'lime'
+		strengthPass.textContent = 'STRONG 🤩'
+	}
+	if (
+		passText.textContent.length >= 15 &&
+		checkBox1.checked == true &&
+		checkBox3.checked == true &&
+		checkBox4.checked == true
+	) {
+		strengthPass.style.color = 'gold'
+		strengthPass.textContent = 'VERY STRONG 💪'
+	}
+}
+
+const moduleStrength = () => {
+	moduleBox.style.display = 'block'
+}
+
+const moduleStrengthClose = () => {
+	moduleBox.style.display = 'none'
 }
 
 const copyPassword = () => {
@@ -118,5 +156,7 @@ const rangeVal = () => {
 	rangeValue.textContent = passLenght.value
 }
 
+moduleOpen.addEventListener('click', moduleStrength)
+moduleClose.addEventListener('click', moduleStrengthClose)
 btnGenerator.addEventListener('click', passGenerator)
 copyBox.addEventListener('click', copyPassword)

@@ -2,74 +2,144 @@
 body {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: "Raleway", sans-serif;
+  background: rgb(22, 20, 31);
+  background: -webkit-gradient(linear, left top, right top, from(rgb(22, 20, 31)), color-stop(53%, rgb(18, 17, 23)), to(rgb(28, 27, 36)));
+  background: linear-gradient(90deg, rgb(22, 20, 31) 0%, rgb(18, 17, 23) 53%, rgb(28, 27, 36) 100%);
+  color: white;
 }
 
 .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100vh;
   width: 100vw;
 }
 
 .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .box__title {
-  background-color: rgb(238, 238, 238);
+  color: rgb(91, 89, 99);
+  background-color: rgb(36, 35, 43);
+  border-radius: 4px 4px 0 0;
   text-align: center;
   font-size: 1.3rem;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 .box__title h1 {
   margin: 20px 0;
 }
 
 .box__option-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .box__option {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   min-width: 500px;
   width: 100%;
   min-height: 100px;
   padding: 20px 0;
-  background-color: rgb(248, 248, 248);
+  background-color: rgb(36, 35, 43);
 }
 
 .box__option-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font-size: 1.4rem;
-  align-items: center;
-  justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
   border-radius: 3px;
   margin: 1px;
 }
 .box__option-input label {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   height: 100%;
 }
 
 .rangeInput {
   width: 300px;
+  margin-bottom: 10px;
+}
+
+.rangeValue {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #178c1b;
+}
+
+.numberPass {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 10px 0;
 }
 
 .box__option-range {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   font-size: 1.2rem;
 }
 
@@ -80,48 +150,97 @@ body {
   position: relative;
   width: 2em;
   height: 2em;
-  border: 1px solid rgb(168, 168, 168);
-  border-radius: 5px;
+  border: 2px solid #248a24;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 2px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 20px;
   cursor: pointer;
 }
 .styled-checkbox::after {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  content: "X";
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  content: "\f14a";
   font-family: "Font Awesome 5 Free";
   font-size: 1.2rem;
   display: none;
 }
 .styled-checkbox:checked {
-  background-color: none;
-  color: #174b4b;
+  background-color: #248a24;
+  color: rgb(36, 35, 43);
 }
 .styled-checkbox:checked::after {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
+.rangeInput {
+  width: 400px;
+  height: 15px;
+  -webkit-appearance: none;
+  background: #111;
+  outline: none;
+  border-radius: 15px;
+  overflow: hidden;
+  -webkit-box-shadow: inset 0 0 5px rgb(0, 0, 0);
+          box-shadow: inset 0 0 5px rgb(0, 0, 0);
+}
+
+.rangeInput::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #178c1b;
+  cursor: pointer;
+  border: 2px solid #333;
+  -webkit-box-shadow: -407px 0 0 400px #178c1b;
+          box-shadow: -407px 0 0 400px #178c1b;
+}
+
 .box__result {
-  margin-top: 30px;
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  background-color: whitesmoke;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: rgb(36, 35, 43);
   max-width: 520px;
   min-height: 60px;
   font-size: 1.5rem;
   padding: 5px;
   overflow-wrap: break-word;
+  border-radius: 0 0 4px 4px;
 }
 
 .box__result--information {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font-size: 1rem;
   margin: 0 10px 10px 0;
-  justify-content: space-between;
-  color: gray;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: rgb(91, 89, 99);
 }
 
 .result-copyPassword {
@@ -136,6 +255,59 @@ body {
   text-align: center;
 }
 
+.pass__test {
+  color: white;
+}
+
+.box__strengthPass {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  font-weight: bold;
+}
+
+.box__strengthPass-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-transform: uppercase;
+  padding: 5px 10px 15px 10px;
+  background-color: #17161d;
+  width: 100%;
+  height: 40px;
+  margin-top: 10px;
+}
+
+.box__strengthPass-firstRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  color: #2a2931;
+}
+.box__strengthPass-firstRow i {
+  cursor: pointer;
+}
+
+.box__strengthPass-secRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 5px;
+}
+
 .generateInput {
   width: 100%;
   cursor: pointer;
@@ -143,9 +315,84 @@ body {
   border: 0;
   font-size: 1.2rem;
   color: white;
-  background-color: #2c8b8b;
+  background-color: #178c1b;
   text-transform: uppercase;
 }
+.generateInput i {
+  margin-left: 10px;
+  -webkit-transition: margin-left 0.5s;
+  transition: margin-left 0.5s;
+}
 .generateInput:hover {
-  background-color: #216d6d;
+<<<<<<< Updated upstream
+  background-color: #178c1b;
+=======
+  background-color: #147517;
+>>>>>>> Stashed changes
+}
+.generateInput:hover i {
+  margin-left: 20px;
+}
+
+.module__info {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 500px;
+  height: 700px;
+  background-color: rgb(36, 35, 43);
+}
+
+.module__function {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 50px;
+}
+
+.module__close {
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+}
+
+.module__content-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.module__social {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2.5rem;
+}
+.module__social a {
+  color: white;
 }/*# sourceMappingURL=style.css.map */
