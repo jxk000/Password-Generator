@@ -7,4 +7,4 @@
 
 ![v1.1](https://prnt.sc/Q2quC9rrPaPw)
 
-![v1.0](https://prnt.sc/Me4T0UQVovey)
+![v1.0](https://media.discordapp.net/attachments/883095553683107850/1024790370233634856/unknown.png)
